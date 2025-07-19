@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://chnbtvbexipnq"]
+[gd_scene load_steps=4 format=3 uid="uid://chnbtvbexipnq"]
 
 [ext_resource type="Texture2D" uid="uid://c8c5gxw54m2nj" path="res://assets/logo/logo.png" id="1_ots34"]
+[ext_resource type="Script" uid="uid://bqxw28ef16xn6" path="res://texture_button.gd" id="2_1n0d2"]
+[ext_resource type="Texture2D" uid="uid://djfipcs5l7utq" path="res://assets/buttons/start.png" id="2_qn1rc"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -10,20 +12,39 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="back" type="ColorRect" parent="."]
 layout_mode = 0
-offset_left = 12.0
-offset_right = 8752.0
+offset_left = -3.0
+offset_right = 1138.0
 offset_bottom = 682.0
+scale = Vector2(1.01325, 1)
 color = Color(0.219608, 0.376471, 0.388235, 1)
 
-[node name="Logo" type="Sprite2D" parent="."]
-position = Vector2(14, 475)
-scale = Vector2(0.632324, 0.632324)
+[node name="logo" type="Sprite2D" parent="."]
+position = Vector2(291, 388)
+scale = Vector2(0.584473, 0.584473)
 texture = ExtResource("1_ots34")
 offset = Vector2(496.976, -247.895)
 
-[node name="Logo" type="Sprite2D" parent="Logo"]
-position = Vector2(2606.26, -227.731)
-scale = Vector2(0.984888, 0.984888)
-texture = ExtResource("1_ots34")
+[node name="TextureButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -77.0
+offset_top = -128.0
+offset_right = -37.0
+offset_bottom = -88.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(3.80561, 1.93846)
+script = ExtResource("2_1n0d2")
+
+[node name="Start" type="Sprite2D" parent="TextureButton"]
+position = Vector2(19.9706, 24.2461)
+scale = Vector2(0.0453105, 0.0947955)
+texture = ExtResource("2_qn1rc")
+
+[connection signal="pressed" from="TextureButton" to="TextureButton" method="_on_pressed"]
