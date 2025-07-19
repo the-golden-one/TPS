@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://chnbtvbexipnq"]
+
+[ext_resource type="Texture2D" uid="uid://c8c5gxw54m2nj" path="res://assets/logo/logo.png" id="1_ots34"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_right = 8752.0
+offset_bottom = 682.0
+color = Color(0.219608, 0.376471, 0.388235, 1)
+
+[node name="Logo" type="Sprite2D" parent="."]
+position = Vector2(14, 475)
+scale = Vector2(0.632324, 0.632324)
+texture = ExtResource("1_ots34")
+offset = Vector2(496.976, -247.895)
+
+[node name="Logo" type="Sprite2D" parent="Logo"]
+position = Vector2(2606.26, -227.731)
+scale = Vector2(0.984888, 0.984888)
+texture = ExtResource("1_ots34")
