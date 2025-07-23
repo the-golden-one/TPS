@@ -1,11 +1,26 @@
-# Godot 4+ specific ignores
-.godot/
-/android/
-.vscode/settings.json
+# Godot 4+ cache and editor data
+.godot/                 # Entire Godot cache folder (safe to ignore)
 .godot/uid_cache.bin
-.godot/editor/editor_layout.cfg
-.godot/editor/filesystem_cache10
-.godot/editor/filesystem_update4
-.godot/editor/project_metadata.cfg
-.godot/editor/recent_dirs
-.godot/editor/script_editor_cache.cfg
+.godot/editor/
+
+# Exported builds and export templates
+/export/                # If you export to a folder
+*.pck
+*.exe
+*.apk
+
+# Build output (optional, if using custom build system)
+build/
+bin/
+
+# Personal IDE/editor configs
+.vscode/settings.json   # Avoid committing personal editor settings
+
+# OS-specific crap
+.DS_Store               # macOS
+Thumbs.db               # Windows
+
+# Temporary files
+*.tmp
+*.log
+*.imported
